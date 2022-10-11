@@ -1,0 +1,13 @@
+v0:
+- seems pretty normal
+- all it does is return no hablo queso
+- shows the return value even if you don't print the name
+v1:
+- we predicted how print(__name__) didn't affect the return statement from showing
+- it still gives you the link to the website after commenting out the run
+v2:
+- print statements go directly to the thonny shell AFTER you click the link
+v3:
+- app.debug = true causes the link to not connect
+v4:
+- 
