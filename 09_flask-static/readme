@@ -1,0 +1,12 @@
+Team Brown: Nakib Abedin, Eric Sohel, Shafiul Haque
+SoftDev pd08
+K09: Some Things Never Change
+2022-10-12
+time spent: 0.2hrs
+DISCO:
+    *figured out how to launch static content to a webpage
+    *figured out how to specify the route depending on the file type
+QCC:
+    *can you link between different directories within your route server?
+    *is an html file always required if you want to route to a link?
+    *is an html file plaintext?

@@ -1,0 +1,8 @@
+this hurrr some plaintext tho
+
+Q: What happens when you access this file
+     via
+      http://localhost:5000/static/foo
+     ?
+
+When you access this file via the link, it shows the message "Is this plaintext, though?" from the html file. but you must have the flask server running.
