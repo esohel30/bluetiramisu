@@ -1,9 +1,10 @@
-# Team Brown: Nakib Abedin, Eric Sohel, Shafiul Haque
-# SoftDev pd08
-# K11: Form(s) Like Voltron
-# 2022-10-13
-# time spent: 0.2hrs
-
+"""
+Dual Ducks: Donald Bi, Brian/Paul Yang, Faiyaz Rafee
+SoftDev
+K11 -- Flask/html forms
+2022-10-14
+time spent: .5 hrs
+"""
 from flask import Flask             #facilitate flask webserving
 from flask import render_template   #facilitate jinja templating
 from flask import request           #facilitate form submission
@@ -13,25 +14,12 @@ from flask import request           #facilitate form submission
 
 app = Flask(__name__)    #create Flask object
 
-mydict = {
-
-}
-
-def filereader():
-    file1 = open("names.csv",'r')
-    sha = file1.readlines()
-    for e in sha:
-        ar = e.split(',')
-        ar[2] = ar[2][0:len(ar[2])-1]
-        mydict[ar[0]] = ar[2]
-
-filereader()
 
 '''
 trioTASK:
 ~~~~~~~~~~~ BEFORE RUNNING THIS, ~~~~~~~~~~~~~~~~~~
 ...read for understanding all of the code below.
-Some will work as written; other sections will not.
+Some will work as written; other sections will not. 
 TASK: Predict which...
 Devise some simple tests you can run to "take apart this engine," as it were.
 Execute your tests.
@@ -42,24 +30,22 @@ PROTIP: Insert your own in-line comments
   your future self and/or current teammates
    understand what is going on.
 '''
-
-@app.route("/") #, methods=['GET', 'POST'])
+@app.route("/" , methods=['GET', 'POST'])
 def disp_loginpage():
     print("\n\n\n")
     print("***DIAG: this Flask obj ***")
-    print(app)
+    print(app) #prints name of the Flask module
     print("***DIAG: request obj ***")
-    print(request)
+    print(request) #Shows the page link
     print("***DIAG: request.args ***")
-    print(request.form)
-    #print("***DIAG: request.args['username']  ***")
-    #print(request.args['username'])
+    print(request.args) #prints dictionary with the user's input on the webpage
+    #print("***DIAG: request.args['username']  ***") #nothing showing up in the terminal
+    #print(request.args['username']) #Uncommenting it results in a failure becuase a username isn't given
     print("***DIAG: request.headers ***")
-    print(request.headers)
+    print(request.headers) #Browser and OS of the user
     return render_template( 'login.html' )
 
-
-@app.route("/auth") # , methods=['GET', 'POST'])
+@app.route("/auth", methods=['GET', 'POST'])
 def authenticate():
     print("\n\n\n")
     print("***DIAG: this Flask obj ***")
@@ -69,17 +55,16 @@ def authenticate():
     print("***DIAG: request.args ***")
     print(request.form)
     #print("***DIAG: request.args['username']  ***")
-    #print(request.args['username'])
+    #print(request.args['username']) #works in authenticate() because username is given
     print("***DIAG: request.headers ***")
     print(request.headers)
-    if (mydict[request.form.get('username')]==mydict[request.form.get('password')]):
-        return "RIGHT PASSWORD " + request.form.get('username') #response to a form submission
-    else:
-        return "WRONG PASSWORD"
+    
+    username = request.form.get('username')
+    return render_template( 'response.html', user = username )  #response to a form submission
 
 
-
+    
 if __name__ == "__main__": #false if this file imported as module
     #enable debugging, auto-restarting of server when this file is modified
-    app.debug = True
+    app.debug = True 
     app.run()
