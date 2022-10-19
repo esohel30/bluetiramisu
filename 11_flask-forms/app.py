@@ -44,7 +44,7 @@ def disp_loginpage():
     print("***DIAG: request obj ***")
     print(request)
     print("***DIAG: request.args ***")
-    print(request.args)
+    print(request.arg)
     #print("***DIAG: request.args['username']  ***")
     #print(request.args['username'])
     print("***DIAG: request.headers ***")
@@ -60,13 +60,13 @@ def authenticate():
     print("***DIAG: request obj ***")
     print(request)
     print("***DIAG: request.args ***")
-    print(request.args)
+    print(request.arg)
     #print("***DIAG: request.args['username']  ***")
     #print(request.args['username'])
     print("***DIAG: request.headers ***")
     print(request.headers)
-    if (mydict[request.args['username']]==request.args['password']):
-        return "RIGHT PASSWORD " + request.args['username'] #response to a form submission
+    if (mydict[request.arg['username']]==request.arg['password']):
+        return "RIGHT PASSWORD " + request.form['username'] #response to a form submission
     else:
         return "WRONG PASSWORD"
 
