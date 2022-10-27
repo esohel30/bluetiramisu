@@ -1,59 +1,48 @@
-body {
-    background-color: #666666;
-    color : black;
-    font-family: Arial, Helvetica, sans-serif;
-}
+/* Metamorphosis: Eric Sohel, Yuki Feng, Maya Mori, Aleksandra Shifrina
+SoftDev
+k14 -- CSS in Flask
+2022-10-19
+time spent: 0.2 */
 
-h1 {
-    color: white;
-    background-color: #BEBEBE;
-    font-weight: 700;
-    margin: 0;
+html {
+    font-family: sans-serif;
+    background: DimGrey;
+  }
+  
+  h1 {
     text-align: center;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    background-color: #767676;
-}
-
-.text,
-.footer {
-    display: flex;
-    padding: 15px 10px;
-}
-
-.left {
-    min-width: 170px;
-}
-
-.nav-foo,
-.main-foo {
-    font-weight: 700;
-    height: 40px;
-}
-
-.nav-foo {
-    font-size: 18px;
-}
-
-.main-foo {
-    font-size: 24px;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    background: silver;
     color: white;
-}
-
-.footer {
+  }
+  
+  body {
+    background: grey;
+  }
+  
+  .main-text {
     display: flex;
-    align-items: center;
-    justify-content: right;
-    background-color: #565656;
-    color:rgb(199, 199, 199);
-    padding: 10px;
-}
+  }
+  
+  .navbar {
+    padding: 20px;
+    width: 700px;             /* why does this value need to be so large? */
+    margin-right: 50px;
+  }
+  
+  /* refers to the <p> tag in "navbar" class */
+  .navbar p{
+    color: white;
+  }
+  
+  .main-foo {
+    margin: 10px;
+  }
+  
+  .footer {
+    background: #505050;
+    color: grey;
+    text-align: right;
+    padding: 1px;
+    padding-right: 10px;        /* moves text away from the right edge */
+  }
+  

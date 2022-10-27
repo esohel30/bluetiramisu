@@ -1,5 +1,3 @@
-DISCOS:
--What exactly is inspect element anyways bro?
-
-QCCS:
-- What is another way we can link our flask terminal to our html code to run it on a live server. 
+DISCO:
+* The ```<link>``` in ```<head>``` needs to have ```href={{url_for('static', filename='style.css')}}``` to link the CSS file to the HTML
+* ```width``` in ```navbar``` goes all the way from the right

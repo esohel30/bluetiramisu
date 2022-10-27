@@ -1,37 +1,100 @@
-<!--
-Metamorphosis: Eric Sohel, Yuki Feng, Maya, ? 
-SoftDev
-K14 - sheesh 
-2022-10-18 
--->
-
 <!DOCTYPE html>
+<!--
+Metamorphosis: Eric Sohel, Yuki Feng, Maya Mori, Aleksandra Shifrina
+SoftDev
+k14 -- CSS in Flask
+2022-10-19
+time spent: 0.3 
+ -->
+
+<!-- <html lang="en" style="font-family:sans-serif; background:DimGrey"> -->
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="../static/style.css">
-    <title>Document</title>
-</head>
-<body>
-    <div class="container">
-        <h1>h1 foo</h1>
-        <div class="text">
-            <div class="left">
-                <div class="nav-foo">nav foo</div>
-                <ul class="bottom-text">
-                    <li>dis</li>
-                    <li>dat</li>
-                    <li>de udda ting</li>
-                </ul>
-            </div>
-            <div class="right">
-                <div class="main-foo">main foo heading</div>
-                <div class="bottom-text">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempor commodo ullamcorper a lacus vestibulum sed. Id leo in vitae turpis massa sed. Risus viverra adipiscing at in tellus integer feugiat scelerisque. Integer malesuada nunc vel risus. Amet commodo nulla facilisi nullam. Elementum nibh tellus molestie nunc. Pulvinar etiam non quam lacus suspendisse. Mattis molestie a iaculis at erat. Nulla at volutpat diam ut venenatis tellus in metus. Scelerisque viverra mauris in aliquam sem fringilla ut morbi tincidunt. Posuere lorem ipsum dolor sit. Gravida dictum fusce ut placerat orci nulla pellentesque dignissim. Quis auctor elit sed vulputate mi sit. Mauris pharetra et ultrices neque ornare. Feugiat in ante metus dictum at tempor commodo ullamcorper.</p>
-                    <p>Cras semper auctor neque vitae. Velit laoreet id donec ultrices tincidunt arcu. Pharetra massa massa ultricies mi quis hendrerit. Euismod elementum nisi quis eleifend quam adipiscing. Viverra justo nec ultrices dui sapien eget mi. Sit amet commodo nulla facilisi nullam. Et ultrices neque ornare aenean. Aliquet nec ullamcorper sit amet risus nullam eget felis eget. Maecenas accumsan lacus vel facilisis volutpat est. Morbi leo urna molestie at elementum eu facilisis sed. Mi ipsum faucibus vitae aliquet nec ullamcorper sit. Sagittis nisl rhoncus mattis rhoncus urna neque viverra justo nec.</p>
-                </div>
-            </div>
-        </div>
-        <div class="footer">Copyright C2015 Clyde "Thluffy" Sinclair</div>
+
+  <head>
+    <meta charset="utf-8">
+    <title> k13 </title>
+    <!-- <link href="mimic.css" rel="stylesheet" type="text/css" /> -->
+    <!-- <link rel=“stylesheet” type=“text/css” href=“mimic.css” /> -->
+    <link href="{{url_for('static', filename='style.css')}}" rel="stylesheet" type="text/css" />
+
+      <!-- <style>
+        h1 {
+          text-align: center;
+          background: silver;
+          color: white;
+        }
+
+        body {
+          background: grey;
+        }
+
+        .main-text {
+          display: flex;
+        }
+
+        .navbar {
+          padding: 20px;
+          width: 700px;
+          margin-right: 50px;
+        }
+
+        .navbar p{
+          color: white;
+        }
+
+        .main-foo {
+          margin: 10px;
+        }
+
+        .footer {
+          background: #505050;
+          color: grey;
+          text-align: right;
+          padding: 1px;
+          padding-right: 10px;
+        }
+
+      </style> -->
+
+    </head>
+
+  <!-- <body style="background:grey"> -->
+  <body>
+    <h1> h1 foo </h1>
+
+    <!-- <div class="main-text" style="display:flex"> -->
+    <div class="main-text">
+
+      <div class="navbar">
+
+      <!-- <div class="navbar" style="padding:20px;width:700px;margin-right:50px"> -->
+      <!-- <div class="navbar" style="display:inline-block;width:180px;"> -->
+        <h3> nav foo </h3>
+          <!-- <p style="color:white"> dis <br> -->
+          <p> dis <br>
+              dat <br>
+              de udda ting
+            </p>
+      </div>
+
+      <!-- <div class="main-foo" style="display:inline-block;margin-left:200px"> -->
+      <!-- <div class="main-foo" style="margin:10px"> -->
+      <div class="main-foo">
+        <h2> main foo heading </h2>
+
+        <p>Tatooine at-at imperial shuttle bb-8 bowcaster lightsaber bowcaster arc-170 starfighter slave 1 kamino bowcaster arc-170 starfighter bb-8 alderaan, kamino iktochi arc-170 starfighter mustafar pulse cannon. Sandcrawler chewbacca mustafar keshiri slugthrower at-at scatter gun, neimoidian coruscant jawa hoth, coruscant r2-d2 tie fighter lightsaber naboo bb-8 ion cannon blaster alderaan. Naboo boba fett mirialan tie. Fighter bespin kamino. Slave 1 arc-170 starfighter hoth coruscant scatter gun naboo. Darth vader coruscant mirialan twi'lek seismic, charge blaster y-wing, scatter gun bb-8 chewbacca gungan. Scatter gun bespin star destroyer bespin rodian gungan.</p>
+
+        <p>Naboo keshiri iktochi tatooine arc-170 starfighter kamino star. Destroyer sandcrawler tie fighter disruptor luke skywalker, pulse cannon thermal detonator twi'lek obi-wan, kenobi bowcaster boba fett star destroyer. Kashyyyk keshiri r2-d2 luke skywalker coruscant coruscant blaster hoth alderaan boba fett boba fett, blaster slugthrower at-at star destroyer. Tatooine tatooine keshiri bb-8 r2-d2 seismic charge.</p>
+
+        <p> Text generator: <a href="https://starwarsipsum.herokuapp.com"> here</a> </p>
+      </div>
     </div>
-</body>
+
+    <!-- <div class="footer" style="background:#505050; color:grey; text-align:right;padding:3px"> -->
+    <div class="footer">
+      <p> Copyright © 2022 Metamorphosis </p>
+    </div>
+
+
+    </body>
 </html>
