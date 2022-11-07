@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title> LOGIN PAGE </title>
+  </head>
+
+  <body>
+    <h3>
+    	Metamorphosis: Eric Sohel, Yuki Feng, Sasha, Maya  <br>
+	    LOGIN PLS
+    </h3>
+    <form action="/login" method="POST">
+      <input type="text" name="username">
+      {% if error == "wrong username!" %}
+      	username is wrong!
+	{% endif %}	
+      <br><br>
+      <input type="password" name="password">
+      {% if error == "wrong password!" %} 
+        password is wrong!
+        {% endif %}
+
+      <br><br>
+      <input type="submit" name="sub1" value="login">
+    </form>
+    <br>
+  </body>
+
+</html>
