@@ -15,15 +15,18 @@ def get_api_key():
     key = ''
     with open('key_nasa.txt','r') as f:     # key in separate file
         key = f.read()
-    # print(f'key: {key}')
+    print(f'key: {key}')
     return key
 
 def get_data():
     api_url = f"https://api.nasa.gov/planetary/apod?api_key={ get_api_key() }"
+        # api_url = f"https://api.nasa.gov/planetary/apod?api_key " + "gKVWffi99mKPSLmc4bGUFb6UxltUtCSJCo6KJLfj"
+    # api_url = "https://api.nasa.gov/planetary/apod?api_key=gKVWffi99mKPSLmc4bGUFb6UxltUtCSJCo6KJLfj"
+
     # print(api_url)
     data = requests.get(api_url).json()
-    # print(data)
-    # print(type(data))
+    print(data)
+    print(type(data))
     return data         # python dictionary
 
 
