@@ -19,7 +19,13 @@
             <a class="nav-link" href="#">Home </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"> nav-item </a>
+            <a class="nav-link" href="#grid"> Grids </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#shadows"> Colors, shadows, buttons </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#tables"> Tables </a>
           </li>
         </ul>
       </div>
@@ -33,6 +39,7 @@
     <br> 
 
 
+    <div id="grid" > 
     <div class="container-sm bg-light" >
     <h2> Grids </h2>
 
@@ -66,12 +73,14 @@
         </div>
       </div>
     </div>
-
-    <p>  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id est vestibulum, lacinia augue eu, consequat dui. Sed at tortor malesuada, viverra magna quis, vulputate urna. Sed lacus nibh, lobortis eu nisl vitae, imperdiet feugiat libero. Donec a velit ante. Quisque accumsan mi at mauris molestie viverra. Praesent vehicula eu ipsum id maximus. Donec in elementum dolor. Integer tincidunt velit sit amet vestibulum eleifend. Vivamus at finibus enim, at pulvinar purus. Cras a turpis arcu. Etiam dapibus felis eu efficitur luctus. Phasellus id venenatis magna, eget ornare lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum eu mi ultricies, ultrices eros efficitur, mattis nulla. Donec rutrum bibendum lacus a euismod. Cras eu consequat elit. </p>
+    <p> </p>
+    <p>Bootstrap's grid system uses a series of containers, rows, and columns to layout and align content. It's built with flexbox and is fully responsive. Above is an example and an in-depth look at how the grid comes together. </p>
     </div>
+    </div>
+  
     <br>
 
-
+    <div id = "shadows" > 
     <div class="container-sm bg-light" >
 
     <h2> Colors, shadows, buttons</h2>
@@ -84,11 +93,15 @@
     <button type="button" class="btn btn-info shadow">Info</button>
     <button type="button" class="btn btn-light shadow">Light</button>
     <button type="button" class="btn btn-dark shadow">Dark</button>
-    <p>  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id est vestibulum, lacinia augue eu, consequat dui. Sed at tortor malesuada, viverra magna quis, vulputate urna. Sed lacus nibh, lobortis eu nisl vitae, imperdiet feugiat libero. Donec a velit ante. Quisque accumsan mi at mauris molestie viverra. Praesent vehicula eu ipsum id maximus. Donec in elementum dolor. Integer tincidunt velit sit amet vestibulum eleifend. Vivamus at finibus enim, at pulvinar purus. Cras a turpis arcu. Etiam dapibus felis eu efficitur luctus. Phasellus id venenatis magna, eget ornare lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum eu mi ultricies, ultrices eros efficitur, mattis nulla. Donec rutrum bibendum lacus a euismod. Cras eu consequat elit. </p>
+    <p> </p> 
+    <p> Bootstrap has a few color ultilities</p>
+    <p>Font color changes automatically depending on the of the button</p>
+    <p> Try going to the dev console and changing "shadow" to "shadow-lg"</p>
 
     </div>
     <br>
     <br>
+    <div id= "tables"> 
     <div class="container-sm bg-light" >
     <h2> Tables </h2>
     <h3>Dark table</h3>
@@ -109,46 +122,55 @@
       </tr>
 
     </table>
-    <p>  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id est vestibulum, lacinia augue eu, consequat dui. Sed at tortor malesuada, viverra magna quis, vulputate urna. Sed lacus nibh, lobortis eu nisl vitae, imperdiet feugiat libero. Donec a velit ante. Quisque accumsan mi at mauris molestie viverra. Praesent vehicula eu ipsum id maximus. Donec in elementum dolor. Integer tincidunt velit sit amet vestibulum eleifend. Vivamus at finibus enim, at pulvinar purus. Cras a turpis arcu. Etiam dapibus felis eu efficitur luctus. Phasellus id venenatis magna, eget ornare lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum eu mi ultricies, ultrices eros efficitur, mattis nulla. Donec rutrum bibendum lacus a euismod. Cras eu consequat elit. </p>
-
+    <p> </p>
+    <p> Use the class "table". If you want to change the theme, use "table-{theme name}" </p>
+    <p> You can still use grid sizes for columns </p>
     </div>
+    </div> 
 
     <br>
 
     <div class="container-sm bg-light" >
     
-    <h3>Striped table</h3>hadows, buttons
-
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">First</th>
-          <th scope="col">Last</th>
-          <th scope="col">Handle</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>blah</td>
-          <td>blah</td>
-          <td>blah</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>blah</td>
-          <td>blah</td>
-          <td>blah</td>
+      <h3>Striped table</h3>
+      <table class="table table-striped">
+        <caption>This is a caption</caption>
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>blah</td>
+            <td>blah</td>
+            <td>blah</td>
+          </tr>
           <tr>
             <th scope="row">2</th>
             <td>blah</td>
             <td>blah</td>
             <td>blah</td>
-          </tr>
-      </tbody>
-    </table>
-    <p>  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id est vestibulum, lacinia augue eu, consequat dui. Sed at tortor malesuada, viverra magna quis, vulputate urna. Sed lacus nibh, lobortis eu nisl vitae, imperdiet feugiat libero. Donec a velit ante. Quisque accumsan mi at mauris molestie viverra. Praesent vehicula eu ipsum id maximus. Donec in elementum dolor. Integer tincidunt velit sit amet vestibulum eleifend. Vivamus at finibus enim, at pulvinar purus. Cras a turpis arcu. Etiam dapibus felis eu efficitur luctus. Phasellus id venenatis magna, eget ornare lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum eu mi ultricies, ultrices eros efficitur, mattis nulla. Donec rutrum bibendum lacus a euismod. Cras eu consequat elit. </p>
+            <tr>
+              <th scope="row">2</th>
+              <td>blah</td>
+              <td>blah</td>
+              <td>blah</td>
+            </tr>
+        </tbody>
+      </table>
+
+    <p> </p>
+    <p> A cooler looking table with stripes!  </p>
 
     </div>
+    </div>
+
+    
 
     
 
